@@ -6,8 +6,10 @@ import { styled } from '@mui/material/styles';
 
 
 const AboutBox = styled('section')(({ theme }) => ({
-  padding: theme.spacing(4),
-  marginTop: theme.spacing(6),
+  paddingTop: theme.spacing(10),
+  paddingLeft: theme.spacing(4),
+  paddingRight: theme.spacing(4),
+  paddingBottom: theme.spacing(2),
   backgroundColor: '#f8fbff',
   display: 'flex', 
   justifyContent: 'space-between', 
@@ -26,7 +28,7 @@ const AboutBox = styled('section')(({ theme }) => ({
 
 export const About = () => {
   return (
-    <AboutBox id='about-container'>
+    <AboutBox id='about-container' >
       <Box
         display={'flex'}
         justifyContent={'center'}
