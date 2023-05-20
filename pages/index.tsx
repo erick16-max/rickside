@@ -35,7 +35,7 @@ const [navBg, setNavBg] = useState<boolean>(false);
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box onScroll={changeNavBg} component={'main'} display='flex' justifyContent={'center'}>
+      <Box onScroll={changeNavBg} component={'main'} display='flex' flexDirection={'column'} justifyContent={'center'}>
         {/* Navbar */}
         <Header navBg={navBg}/>
 

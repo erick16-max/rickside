@@ -10,7 +10,7 @@ const AboutBox = styled('section')(({ theme }) => ({
   paddingLeft: theme.spacing(4),
   paddingRight: theme.spacing(4),
   paddingBottom: theme.spacing(2),
-  backgroundColor: '#f8fbff',
+  backgroundColor: '#e6f0ff',
   display: 'flex', 
   justifyContent: 'space-between', 
   width: '100%',
