@@ -3,7 +3,8 @@ import { Box, colors, useTheme } from '@mui/material'
 import { tokens } from '@/theme'
 import Header from '@/container/Header'
 import { About } from '@/container/About'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
+import { Loader } from '@/container/Loader'
 
 
 export default function Home() {
@@ -35,13 +36,16 @@ const [navBg, setNavBg] = useState<boolean>(false);
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box onScroll={changeNavBg} component={'main'} display='flex' flexDirection={'column'} justifyContent={'center'}>
-        {/* Navbar */}
-        <Header navBg={navBg}/>
+      <Suspense fallback={<Loader />}>
+        <Box onScroll={changeNavBg} component={'main'} display='flex' flexDirection={'column'} justifyContent={'center'}>
+          {/* Navbar */}
+          <Header navBg={navBg}/>
 
-        {/* About Us Hero */}
-        <About />
-      </Box>
+          {/* About Us Hero */}
+          <About />
+          
+        </Box>
+      </Suspense>
       
     </>
   )
