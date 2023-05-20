@@ -76,7 +76,6 @@ export default function Header(props: Iprops) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Fade in={true}>
       <Box 
         sx={{ 
           display: "flex", 
@@ -167,6 +166,5 @@ export default function Header(props: Iprops) {
           </Drawer>
         </Box>
       </Box>
-    </Fade>
   );
 }
