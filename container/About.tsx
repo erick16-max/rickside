@@ -67,7 +67,7 @@ export const About = () => {
               </Typography>
             </Button>
       </Box>
-      <Box ml={6}> 
+      
         <Image 
           id='about-image'
           src={AboutImage}
@@ -75,7 +75,7 @@ export const About = () => {
           width={500}
           height={500}
         />
-      </Box>
+      
    
     </AboutBox>
   )

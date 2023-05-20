@@ -61,11 +61,12 @@ body,
   }
   #about-heading {
     font-size: 34px;
+    
   }
   #about-image {
-    margin: 0;
-    width: 270px;
-    padding: 0;
+    margin: 0px;
+    width: 90vw;
+    padding: 0px;
   }
 }
 
