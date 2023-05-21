@@ -14,6 +14,7 @@ const colors = tokens(theme.palette.mode)
 const backgroundColorContent = theme.palette.mode === 'dark' ? `${colors.blackPrimary[500]}` : '#e6f0ff'
 
 const [navBg, setNavBg] = useState<boolean>(false);
+const [isLoading, setIsLoading] = useState<boolean>(true)
   
 
   const changeNavBg = () => {
@@ -27,6 +28,10 @@ const [navBg, setNavBg] = useState<boolean>(false);
     }
   }, [])
 
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
 
   return (
     <>
@@ -36,6 +41,9 @@ const [navBg, setNavBg] = useState<boolean>(false);
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/img/fav.png" />
       </Head>
+      {
+        isLoading ?
+        <Loader /> :
 
       <Suspense fallback={<Loader />}>
         <Box onScroll={changeNavBg} component={'main'} display='flex' flexDirection={'column'} justifyContent={'center'}>
@@ -44,6 +52,7 @@ const [navBg, setNavBg] = useState<boolean>(false);
           <Services />
         </Box>
       </Suspense>
+      }
       
     </>
   )
