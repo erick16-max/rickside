@@ -1,5 +1,5 @@
 //@ts-nocheck
-import { Box, Grid, Typography , Card } from '@mui/material'
+import { Box, Grid, Typography , Card, Avatar } from '@mui/material'
 import React from 'react'
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
@@ -60,7 +60,9 @@ export const Services = () => {
                         flexDirection={'column'}
                         color='#154266'
                     >
-                         <LanguageOutlinedIcon sx={{fontSize: 64}}/>
+                        <Avatar sx={{ bgcolor: '#d0d9e0', width:70, height: 70 }}>
+                            <LanguageOutlinedIcon  sx={{fontSize: 84, color: '#154266', p: 2,}}/>
+                        </Avatar>
                          <Typography 
                             fontWeight={600} 
                             variant='h6'
@@ -93,7 +95,10 @@ export const Services = () => {
                         flexDirection={'column'}
                         color='#154266'
                     >
-                         <PhoneIphoneOutlinedIcon sx={{fontSize: 64}}/>
+                         <Avatar sx={{ bgcolor: '#d0d9e0', width:70, height: 70 }}>
+                            <PhoneIphoneOutlinedIcon  sx={{fontSize: 84, color: '#154266', p: 2,}}/>
+                        </Avatar>
+                         
                          <Typography 
                             fontWeight={600} 
                             variant='h6'
@@ -126,7 +131,9 @@ export const Services = () => {
                         flexDirection={'column'}
                         color='#154266'
                     >
-                         <DesktopMacOutlinedIcon sx={{fontSize: 64}}/>
+                        <Avatar sx={{ bgcolor: '#b9c6d1', width:70, height: 70 }}>
+                            <DesktopMacOutlinedIcon  sx={{fontSize: 84, color: '#154266', p: 2,}}/>
+                        </Avatar>
                          <Typography 
                             fontWeight={600} 
                             variant='h6'
