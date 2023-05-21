@@ -35,9 +35,9 @@ export const Services = () => {
                 fontSize={18}
                 mt={2}
                 >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis impedit quam
-                 ipsam facilis eveniet doloremque reprehenderi magni sunt rerum earum odio pariatur
-                  aspernatur atque quae, consectetur in suscipit doloribus sapiente.
+                RickSide Technologies sole focus is on software application development as a service in finding solutions to 
+                business objectives, goals and problem encountered in running it. Through automating several processes, building secure, user friendly
+                and scalable software application products, we are able to meet a client's demands and preferences.
             </Typography>
         </Typography>
         
