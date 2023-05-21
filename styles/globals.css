@@ -71,4 +71,11 @@ body,
   }
 }
 
+/* Service Section Media Queries */
+@media screen and (min-width: 600px){
+  .service-title {
+    margin: auto;
+    text-align: center;
+  }
+}
 

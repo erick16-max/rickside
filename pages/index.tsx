@@ -5,6 +5,7 @@ import Header from '@/container/Header'
 import { About } from '@/container/About'
 import { useState, useEffect, Suspense } from 'react'
 import { Loader } from '@/container/Loader'
+import { Services } from '@/container/Services'
 
 
 export default function Home() {
@@ -38,12 +39,9 @@ const [navBg, setNavBg] = useState<boolean>(false);
 
       <Suspense fallback={<Loader />}>
         <Box onScroll={changeNavBg} component={'main'} display='flex' flexDirection={'column'} justifyContent={'center'}>
-          {/* Navbar */}
           <Header navBg={navBg}/>
-
-          {/* About Us Hero */}
           <About />
-          
+          <Services />
         </Box>
       </Suspense>
       
