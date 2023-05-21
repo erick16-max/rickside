@@ -60,7 +60,7 @@ export const Services = () => {
                         flexDirection={'column'}
                         color='#154266'
                     >
-                        <Avatar sx={{ bgcolor: '#d0d9e0', width:70, height: 70 }}>
+                        <Avatar sx={{ bgcolor: '#e8ecf0', width:70, height: 70 }}>
                             <LanguageOutlinedIcon  sx={{fontSize: 84, color: '#154266', p: 2,}}/>
                         </Avatar>
                          <Typography 
@@ -95,7 +95,7 @@ export const Services = () => {
                         flexDirection={'column'}
                         color='#154266'
                     >
-                         <Avatar sx={{ bgcolor: '#d0d9e0', width:70, height: 70 }}>
+                         <Avatar sx={{ bgcolor: '#e8ecf0', width:70, height: 70 }}>
                             <PhoneIphoneOutlinedIcon  sx={{fontSize: 84, color: '#154266', p: 2,}}/>
                         </Avatar>
                          
@@ -131,7 +131,7 @@ export const Services = () => {
                         flexDirection={'column'}
                         color='#154266'
                     >
-                        <Avatar sx={{ bgcolor: '#b9c6d1', width:70, height: 70 }}>
+                        <Avatar sx={{ bgcolor: '#e8ecf0', width:70, height: 70 }}>
                             <DesktopMacOutlinedIcon  sx={{fontSize: 84, color: '#154266', p: 2,}}/>
                         </Avatar>
                          <Typography 
