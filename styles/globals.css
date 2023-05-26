@@ -72,7 +72,7 @@ body,
 }
 
 /* Service Section Media Queries */
-@media screen and (min-width: 600px){
+@media screen and (min-width: 900px){
   .service-title {
     margin: auto;
     text-align: center;

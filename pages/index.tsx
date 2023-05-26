@@ -3,9 +3,10 @@ import { Box, colors, useTheme } from '@mui/material'
 import { tokens } from '@/theme'
 import Header from '@/container/Header'
 import { About } from '@/container/About'
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect } from 'react'
 import { Loader } from '@/container/Loader'
 import { Services } from '@/container/Services'
+
 
 
 export default function Home() {
@@ -15,6 +16,9 @@ const backgroundColorContent = theme.palette.mode === 'dark' ? `${colors.blackPr
 
 const [navBg, setNavBg] = useState<boolean>(false);
 const [isLoading, setIsLoading] = useState<boolean>(true)
+
+
+
   
 
   const changeNavBg = () => {
@@ -22,17 +26,13 @@ const [isLoading, setIsLoading] = useState<boolean>(true)
   }
 
   useEffect(() => {
+    setIsLoading(false);
     window.addEventListener('scroll', changeNavBg);
     return () => {
       window.removeEventListener('scroll', changeNavBg);
     }
   }, [])
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1000)
-  }, [])
 
 
   return (
@@ -47,13 +47,14 @@ const [isLoading, setIsLoading] = useState<boolean>(true)
         isLoading ?
         <Loader /> :
 
-      <Suspense fallback={<Loader />}>
-        <Box onScroll={changeNavBg} component={'main'} display='flex' flexDirection={'column'} justifyContent={'center'}>
-          <Header navBg={navBg}/>
-          <About />
-          <Services />
-        </Box>
-      </Suspense>
+          <Box>
+            <Header navBg={navBg}/>
+            <About />
+            <Services />
+          </Box>
+  
+        
+      
       }
       
     </>

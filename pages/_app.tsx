@@ -1,18 +1,17 @@
 import '@/styles/globals.css'
-import { Roboto } from 'next/font/google'
 import { AppProps } from 'next/app'
 import { ColorModeContext, useMode } from '@/theme'
-import { CssBaseline, ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider, duration } from '@mui/material'
+import { useEffect, useRef } from 'react';
 
 
 
-const roboto = Roboto({
-  weight: '700',
-  subsets: ['latin'],
-})
+
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, colorMode] = useMode()
+  const [theme, colorMode] = useMode();
+  const ref = useRef(null);
+  
   return (
     //@ts-ignore
     <ColorModeContext.Provider value={colorMode}>
@@ -20,8 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
          // @ts-ignore */}
        <ThemeProvider theme={theme}>
         <CssBaseline />
-        <main className='app'>
-            <Component {...pageProps} />
+        <main >
+           
+                <Component {...pageProps} />
+         
         </main>
        </ThemeProvider>
     </ColorModeContext.Provider>
