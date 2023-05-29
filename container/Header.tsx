@@ -43,6 +43,8 @@ export default function Header(props: Iprops) {
       <Image
               src={Logo}
               alt='logo'
+              width={140} 
+              height={50}
               
             />
       </Typography>
